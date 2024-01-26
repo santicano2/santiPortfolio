@@ -1,0 +1,29 @@
+{
+  "name": "santiportfolio",
+  "version": "1.0.0",
+  "description": "Pagina web de Santiago Cano",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Santiago Cano",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^11.0.3",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0",
+    "prettier": "^3.2.4"
+  }
+}
