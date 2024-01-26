@@ -18,23 +18,21 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  const cookieImg = `/images/cookie${useColorModeValue('', '-dark')}.svg`
 
   return (
     <Link href="/">
-      <a>
-        <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily="M PLUS Rounded 1c"
-            fontWeight="bold"
-            ml={3}
-          >
-            Santiago Cano
-          </Text>
-        </LogoBox>
-      </a>
+      <LogoBox>
+        <Image src={cookieImg} width={20} height={20} alt="logo" />
+        <Text
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          fontFamily='M PLUS Rounded 1c", sans-serif'
+          fontWeight="bold"
+          ml={3}
+        >
+          Santiago Cano
+        </Text>
+      </LogoBox>
     </Link>
   )
 }

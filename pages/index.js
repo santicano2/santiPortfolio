@@ -3,7 +3,7 @@ import { Container, Box, Heading } from '@chakra-ui/react'
 const Page = () => {
   return (
     <Container>
-      <Box borderRadius="lg" bg="red" p={3} mb={6} align="center">
+      <Box borderRadius="lg" bg="red" p={3} mb={6} textAlign="center">
         Hola, soy un desarrollador web de Argentina!
       </Box>
 
@@ -12,10 +12,9 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Santiago Cano
           </Heading>
-          <p>Front end developer con conocimientos de back end</p>
+          <p>FrontEnd developer + BackEnd</p>
         </Box>
       </Box>
-      <div>Hola</div>
     </Container>
   )
 }
