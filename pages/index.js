@@ -1,11 +1,15 @@
+import NextLink from 'next/link'
 import {
   Container,
   Box,
   Heading,
   Image,
-  useColorModeValue
+  useColorModeValue,
+  Button
 } from '@chakra-ui/react'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = () => {
   return (
@@ -25,7 +29,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Santiago Cano
           </Heading>
-          <p>FullStack developer</p>
+          <p>FrontEnd developer</p>
         </Box>
         <Box
           flexShrink={0}
@@ -55,9 +59,34 @@ const Page = () => {
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Trabajo
+          Sobre mí
         </Heading>
-        <p>Párrafo</p>
+        <Paragraph>
+          Me llamo Santi, tengo 21 años y vivo en Buenos Aires, Argentina. Soy
+          un desarrollador web enfocado en Front End con conocimientos en Back
+          End.
+        </Paragraph>
+        <Paragraph>
+          Desde pequeño me encantan las computadoras y todo lo que tenga que ver
+          con la tecnología. En mi adolescencia descubrí la programación pero no
+          fue hasta 2022 que decidí dedicarme a esta hermosa profesión. Hoy en
+          día cuento con experiencia construyendo sitios y aplicaciones web.
+        </Paragraph>
+        <Paragraph>
+          Actualmente estoy estudiando la carrera Licenciatura en Sistemas en la
+          Universidad Nacional de Lanús (UNLa).
+        </Paragraph>
+        <Box textAlign="center" my={4}>
+          <Button
+            as={NextLink}
+            href="/projects"
+            scroll={false}
+            rightIcon={<ChevronRightIcon />}
+            colorScheme="teal"
+          >
+            Mi portfolio
+          </Button>
+        </Box>
       </Section>
     </Container>
   )
