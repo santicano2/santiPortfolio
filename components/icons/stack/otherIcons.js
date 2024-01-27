@@ -2,7 +2,7 @@ import { Icon } from '@chakra-ui/react'
 
 export const CIcon = props => (
   <Icon viewBox="0 0 306 345" {...props}>
-    <g clip-path="url(#a)">
+    <g clipPath="url(#a)">
       <path
         fill="#00599C"
         d="M302.107 258.262c2.401-4.159 3.893-8.845 3.893-13.053V99.139c0-4.207-1.49-8.892-3.892-13.051L153 172.175l149.107 86.087Z"

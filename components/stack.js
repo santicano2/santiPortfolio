@@ -1,5 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { Box, Heading, Stack, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  Heading,
+  Stack,
+  useColorModeValue,
+  Tooltip
+} from '@chakra-ui/react'
 import Section from './section'
 import {
   HTMLIcon,
@@ -54,15 +60,51 @@ const StackSection = () => (
         spacing="18px"
         wrap={'wrap'}
       >
-        <HTMLIcon boxSize={8} />
-        <CSSIcon boxSize={8} />
-        <JSIcon boxSize={8} />
-        <TSIcon boxSize={8} />
-        <ReactIcon boxSize={8} />
-        <TailWindIcon boxSize={8} />
-        <NextIcon boxSize={8} />
-        <ChakraIcon boxSize={8} />
-        <ViteIcon boxSize={8} />
+        <Tooltip label="HTML5">
+          <span>
+            <HTMLIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="CSS">
+          <span>
+            <CSSIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="JavaScript">
+          <span>
+            <JSIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="TypeScript">
+          <span>
+            <TSIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="React">
+          <span>
+            <ReactIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Tailwind CSS">
+          <span>
+            <TailWindIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Next.js">
+          <span>
+            <NextIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Chakra UI">
+          <span>
+            <ChakraIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Vite.js">
+          <span>
+            <ViteIcon boxSize={8} />
+          </span>
+        </Tooltip>
       </Stack>
     </Box>
     <Box
@@ -83,10 +125,26 @@ const StackSection = () => (
         spacing="18px"
         wrap={'wrap'}
       >
-        <NodeIcon boxSize={8} />
-        <ExpressIcon boxSize={8} />
-        <MongodbIcon boxSize={8} />
-        <JWTIcon boxSize={8} />
+        <Tooltip label="Node.js">
+          <span>
+            <NodeIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Express">
+          <span>
+            <ExpressIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="MongoDB">
+          <span>
+            <MongodbIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="JWT">
+          <span>
+            <JWTIcon boxSize={8} />
+          </span>
+        </Tooltip>
       </Stack>
     </Box>
     <Box
@@ -107,8 +165,16 @@ const StackSection = () => (
         spacing="18px"
         wrap={'wrap'}
       >
-        <VercelIcon boxSize={8} />
-        <NetlifyIcon boxSize={8} />
+        <Tooltip label="Vercel">
+          <span>
+            <VercelIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Netlify">
+          <span>
+            <NetlifyIcon boxSize={8} />
+          </span>
+        </Tooltip>
       </Stack>
     </Box>
     <Box
@@ -129,15 +195,51 @@ const StackSection = () => (
         spacing="18px"
         wrap={'wrap'}
       >
-        <CIcon boxSize={8} />
-        <JavaIcon boxSize={8} />
-        <CloudinaryIcon boxSize={8} />
-        <GitIcon boxSize={8} />
-        <GitHubIcon boxSize={8} />
-        <NotionIcon boxSize={8} />
-        <NPMIcon boxSize={8} />
-        <PostmanIcon boxSize={8} />
-        <VSCodeIcon boxSize={8} />
+        <Tooltip label="C">
+          <span>
+            <CIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Java">
+          <span>
+            <JavaIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Cloudinary">
+          <span>
+            <CloudinaryIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Git">
+          <span>
+            <GitIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="GitHub">
+          <span>
+            <GitHubIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Notion">
+          <span>
+            <NotionIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="NPM">
+          <span>
+            <NPMIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="Postman">
+          <span>
+            <PostmanIcon boxSize={8} />
+          </span>
+        </Tooltip>
+        <Tooltip label="VS Code">
+          <span>
+            <VSCodeIcon boxSize={8} />
+          </span>
+        </Tooltip>
       </Stack>
     </Box>
   </Section>
