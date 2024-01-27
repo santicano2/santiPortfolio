@@ -22,7 +22,7 @@ const Page = () => {
           textAlign="center"
         >
           <Box
-            borderColor="whiteAplha.800"
+            borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
             w="100px"
