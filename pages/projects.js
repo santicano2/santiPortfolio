@@ -18,8 +18,8 @@ const Works = () => {
             title="Where's Wally"
             thumbnail={thumbWilly}
           >
-            Una imitación del juego Where&apos;s Wally. Donde buscas a los
-            personajes clickeando en la imagen, con sistema de puntuación.
+            Una imitación del juego Where&apos;s Wally, con sistema de
+            puntuación.
           </WorkGridItem>
         </Section>
       </SimpleGrid>
