@@ -9,6 +9,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
       <Image
         src={thumbnail}
         alt={title}
+        style={{ borderRadius: '12px' }}
         className="grid-item-thumbnail"
         placeholder="blur"
         loading="lazy"
@@ -38,6 +39,7 @@ export const WorkGridItem = ({
       <Image
         src={thumbnail}
         alt={title}
+        style={{ borderRadius: '12px' }}
         className="grid-item-thumbnail"
         placeholder="blur"
       />
@@ -54,9 +56,9 @@ export const WorkGridItem = ({
 export const GridItemStyle = () => (
   <Global
     styles={`
-        .grid-item-thumbnail {
-            border-radius: 12px;
-        }
+      .grid-item-thumbnail {
+        border-radius: 12px;
+      }
     `}
   />
 )
