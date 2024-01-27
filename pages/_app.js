@@ -1,12 +1,11 @@
-import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
-import theme from '../lib/theme'
+import Chakra from '../components/chakra'
 
-const Website = ({ Component, pageProps, router }) => {
+function Website({ Component, pageProps, router }) {
   return (
-    <ChakraProvider theme={theme}>
+    <Chakra cookies={pageProps.cookies}>
       <Fonts />
       <Layout router={router}>
         <AnimatePresence
@@ -21,7 +20,7 @@ const Website = ({ Component, pageProps, router }) => {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </Layout>
-    </ChakraProvider>
+    </Chakra>
   )
 }
 
