@@ -1,5 +1,12 @@
 import NextLink from 'next/link'
-import { Container, Box, Heading, Image, Button } from '@chakra-ui/react'
+import {
+  Container,
+  Box,
+  Heading,
+  Image,
+  Button,
+  useColorModeValue
+} from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import StackSection from '../components/stack'
@@ -66,7 +73,7 @@ const Page = () => {
             href="/projects"
             scroll={false}
             rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
+            colorScheme={useColorModeValue('blue', 'red')}
           >
             Mi portfolio
           </Button>
