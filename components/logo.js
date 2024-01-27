@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Text, useColorModeValue } from '@chakra-ui/react'
-import CookieIcon from './icons/cookie'
+import CodeIcon from './icons/codeIcon'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
@@ -25,7 +25,7 @@ const Logo = () => {
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <CookieIcon />
+        <CodeIcon mr={2} />
         <Text
           color={useColorModeValue('gray.800', 'whiteAlpha.900')}
           fontFamily='M PLUS Rounded 1c", sans-serif'
