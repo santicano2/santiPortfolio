@@ -3,6 +3,7 @@ import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
 import thumbWilly from '../public/images/works/thumbnail_willy.png'
+import thumbWeText from '../public/images/works/thumbnail_wetext.png'
 
 const Works = () => {
   return (
@@ -18,8 +19,12 @@ const Works = () => {
             title="Where's Wally"
             thumbnail={thumbWilly}
           >
-            Una imitación del juego Where&apos;s Wally, con sistema de
-            puntuación.
+            Inspirado en el juego Where&apos;s Wally, con sistema de puntuación.
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem id="WeText" title="WeText" thumbnail={thumbWeText}>
+            Una app web de mensaje de texto
           </WorkGridItem>
         </Section>
       </SimpleGrid>
