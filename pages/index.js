@@ -29,8 +29,8 @@ const Page = () => {
           textAlign="center"
         >
           <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
+            borderColor={useColorModeValue('gray.800', 'whiteAlpha.900')}
+            borderWidth={3}
             borderStyle="solid"
             w="100px"
             h="100px"
@@ -67,7 +67,7 @@ const Page = () => {
           Actualmente estoy estudiando la carrera Licenciatura en Sistemas en la
           Universidad Nacional de Lanús (UNLa).
         </Paragraph>
-        <Box textAlign="center" my={4}>
+        <Box textAlign="center" my={6}>
           <Button
             as={NextLink}
             href="/projects"
