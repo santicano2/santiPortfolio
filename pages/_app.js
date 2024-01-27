@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
+import { AnimatePresence } from 'framer-motion'
 import theme from '../lib/theme'
 
 const Website = ({ Component, pageProps, router }) => {
@@ -8,7 +9,17 @@ const Website = ({ Component, pageProps, router }) => {
     <ChakraProvider theme={theme}>
       <Fonts />
       <Layout router={router}>
-        <Component {...pageProps} key={router.route} />
+        <AnimatePresence
+          mode="wait"
+          initial={true}
+          onExitComplete={() => {
+            if (typeof window !== 'undefined') {
+              window.scrollTo({ top: 0 })
+            }
+          }}
+        >
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </Layout>
     </ChakraProvider>
   )

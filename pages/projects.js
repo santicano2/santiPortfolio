@@ -1,4 +1,5 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
@@ -11,8 +12,8 @@ import thumbSuperheroMemory from '../public/images/works/thumbnail_superheromemo
 import thumbBattleship from '../public/images/works/thumbnail_battleship.png'
 import thumbEtchASketch from '../public/images/works/thumbnail_etch-a-sketch.png'
 
-const Works = () => {
-  return (
+const Works = () => (
+  <Layout title="Proyectos">
     <Container>
       <Heading as="h3" fontSize={20} my={4}>
         Proyectos
@@ -101,7 +102,7 @@ const Works = () => {
         </Section>
       </SimpleGrid>
     </Container>
-  )
-}
+  </Layout>
+)
 
 export default Works
