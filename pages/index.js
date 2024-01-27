@@ -1,12 +1,5 @@
 import NextLink from 'next/link'
-import {
-  Container,
-  Box,
-  Heading,
-  Image,
-  useColorModeValue,
-  Button
-} from '@chakra-ui/react'
+import { Container, Box, Heading, Image, Button } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import StackSection from '../components/stack'
@@ -15,22 +8,12 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 const Page = () => {
   return (
     <Container>
-      <Box
-        borderRadius="lg"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        p={3}
-        mb={6}
-        textAlign="center"
-      >
-        Hola, soy un desarrollador web de Argentina!
-      </Box>
-
-      <Box display={{ md: 'flex' }}>
+      <Box display={{ md: 'flex' }} mt={6}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Santiago Cano
           </Heading>
-          <p>FrontEnd developer</p>
+          <p>Desarrollador web | FrontEnd developer</p>
         </Box>
         <Box
           flexShrink={0}
