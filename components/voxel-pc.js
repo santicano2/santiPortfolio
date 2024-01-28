@@ -71,7 +71,7 @@ const VoxelPc = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene, '/PC.gltf', {
+      loadGLTFModel(scene, '/PC2.gltf', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
