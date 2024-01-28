@@ -1,6 +1,13 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Navbar from '../navbar'
 import { Box, Container } from '@chakra-ui/react'
+import VoxelPcLoader from '../voxel-pc-loader'
+
+const LazyVoxelPc = dynamic(() => import('../voxel-pc'), {
+  ssr: false,
+  loading: () => <VoxelPcLoader />
+})
 
 const Main = ({ children, router }) => {
   return (
@@ -13,6 +20,7 @@ const Main = ({ children, router }) => {
       <Navbar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
+        <LazyVoxelPc />
         {children}
       </Container>
     </Box>
