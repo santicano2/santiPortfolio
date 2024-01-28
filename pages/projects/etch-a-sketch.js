@@ -12,32 +12,32 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Project = () => (
-  <Layout title="Creador CV">
+  <Layout title="Etch-A-Sketch">
     <Container my={6}>
       <Title>
-        Creador CV <Badge>2023</Badge>
+        Etch-A-Sketch <Badge>2023</Badge>
       </Title>
       <Paragraph>
-        Sitio web para crear tu CV, con secciones de información personal,
-        educación, habilidades y expericiencia
+        Sitio web para dibujar sobre un canvas, con diferentes colores y opción
+        para arcoíris. De los primeros proyectos que hice.
       </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Sitio Web</Meta>
-          <Link href="https://lavieja1.github.io/cv-application/">
-            https://lavieja1.github.io/cv-application/
+          <Link href="https://lavieja1.github.io/etch-a-sketch2023/">
+            https://lavieja1.github.io/etch-a-sketch2023/
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>React</span>
+          <span>HTML, CSS, JavaScript</span>
         </ListItem>
       </List>
 
       <WorkImage
-        src="/images/projects/thumbnail_creadorcv.png"
-        alt="Creador CV"
+        src="/images/projects/thumbnail_etch-a-sketch.png"
+        alt="Etch-A-Sketch"
       />
     </Container>
   </Layout>

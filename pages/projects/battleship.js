@@ -15,7 +15,7 @@ const Project = () => (
   <Layout title="Battleship">
     <Container my={6}>
       <Title>
-        Battleship <Badge>2024</Badge>
+        Battleship <Badge>2023</Badge>
       </Title>
       <Paragraph>
         Juego clasíco de la batalla naval, se pueden colocar las flotas

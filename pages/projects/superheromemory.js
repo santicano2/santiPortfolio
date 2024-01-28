@@ -12,20 +12,19 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Project = () => (
-  <Layout title="Creador CV">
+  <Layout title="Superhero Memory">
     <Container my={6}>
       <Title>
-        Creador CV <Badge>2023</Badge>
+        Superhero Memory <Badge>2023</Badge>
       </Title>
       <Paragraph>
-        Sitio web para crear tu CV, con secciones de información personal,
-        educación, habilidades y expericiencia
+        Juego de memoria con superheroes usando la SuperHero API
       </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Sitio Web</Meta>
-          <Link href="https://lavieja1.github.io/cv-application/">
-            https://lavieja1.github.io/cv-application/
+          <Link href="https://lavieja1.github.io/memory-card-game/">
+            https://lavieja1.github.io/memory-card-game/
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
@@ -36,8 +35,8 @@ const Project = () => (
       </List>
 
       <WorkImage
-        src="/images/projects/thumbnail_creadorcv.png"
-        alt="Creador CV"
+        src="/images/projects/thumbnail_superheromemory.png"
+        alt="Superhero memory"
       />
     </Container>
   </Layout>
