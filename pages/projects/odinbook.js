@@ -12,32 +12,31 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Project = () => (
-  <Layout title="WeText">
+  <Layout title="OdinBook">
     <Container my={6}>
       <Title>
-        WeText <Badge>2024</Badge>
+        OdinBook <Badge>2024</Badge>
       </Title>
       <Paragraph>
-        App para mandar mensajes entre usuarios, con autentificación y
-        almacenamiento de imagenes
+        Intento de clon de la red social Facebook, con funciones y
+        características similares
       </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Sitio Web</Meta>
-          <Link href="https://top-we-text.vercel.app/">
-            https://top-we-text.vercel.app/
+          <Link href="https://top-odin-book-front-end.vercel.app/">
+            https://top-odin-book-front-end.vercel.app/
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>React, NodeJS, Socket.io, Cloudinary, MongoDB</span>
+          <span>React, NodeJS, MondoDB, TailwindCSS</span>
         </ListItem>
       </List>
 
-      <WorkImage src="/images/projects/thumbnail_wetext.png" alt="WeText" />
-      <WorkImage src="/images/projects/wetext.png" alt="WeText" />
-      <WorkImage src="/images/projects/wetext2.png" alt="WeText" />
+      <WorkImage src="/images/projects/thumbnail_odinbook.png" alt="OdinBook" />
+      <WorkImage src="/images/projects/odinbook.png" alt="OdinBook" />
     </Container>
   </Layout>
 )
