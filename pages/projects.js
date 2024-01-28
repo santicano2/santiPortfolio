@@ -50,7 +50,7 @@ const projects = () => (
             title="Shop Cart"
             thumbnail={thumbShopCart}
           >
-            Un sitio web de compra de ropa falsa
+            Sitio web de compra de ropa usando una API
           </WorkGridItem>
         </Section>
       </SimpleGrid>
