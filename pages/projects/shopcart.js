@@ -15,7 +15,7 @@ const Project = () => (
   <Layout title="Shop Cart">
     <Container my={6}>
       <Title>
-        Shop Cart <Badge>2024</Badge>
+        Shop Cart <Badge>2023</Badge>
       </Title>
       <Paragraph>Sitio web de compra de ropa usando una API</Paragraph>
       <List ml={4} my={4}>
