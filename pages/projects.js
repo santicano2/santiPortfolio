@@ -3,16 +3,16 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
-import thumbWilly from '../public/images/works/thumbnail_willy.png'
-import thumbWeText from '../public/images/works/thumbnail_wetext.png'
-import thumbOdinBook from '../public/images/works/thumbnail_odinbook.png'
-import thumbShopCart from '../public/images/works/thumbnail_shopcart.png'
-import thumbCreadorCV from '../public/images/works/thumbnail_creadorcv.png'
-import thumbSuperheroMemory from '../public/images/works/thumbnail_superheromemory.png'
-import thumbBattleship from '../public/images/works/thumbnail_battleship.png'
-import thumbEtchASketch from '../public/images/works/thumbnail_etch-a-sketch.png'
+import thumbWilly from '../public/images/projects/thumbnail_willy.png'
+import thumbWeText from '../public/images/projects/thumbnail_wetext.png'
+import thumbOdinBook from '../public/images/projects/thumbnail_odinbook.png'
+import thumbShopCart from '../public/images/projects/thumbnail_shopcart.png'
+import thumbCreadorCV from '../public/images/projects/thumbnail_creadorcv.png'
+import thumbSuperheroMemory from '../public/images/projects/thumbnail_superheromemory.png'
+import thumbBattleship from '../public/images/projects/thumbnail_battleship.png'
+import thumbEtchASketch from '../public/images/projects/thumbnail_etch-a-sketch.png'
 
-const Works = () => (
+const projects = () => (
   <Layout title="Proyectos">
     <Container>
       <Heading as="h3" fontSize={20} my={4}>
@@ -105,5 +105,5 @@ const Works = () => (
   </Layout>
 )
 
-export default Works
+export default projects
 export { getServerSideProps } from '../components/chakra'
