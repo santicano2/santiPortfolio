@@ -1,17 +1,17 @@
 import NextLink from 'next/link'
 import {
   Container,
-  Box,
   Heading,
-  Image,
+  Box,
   Button,
   useColorModeValue
 } from '@chakra-ui/react'
-import Section from '../components/section'
-import Paragraph from '../components/paragraph'
-import StackSection from '../components/stack'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
+import Section from '../components/section'
+import StackSection from '../components/stack'
+import Image from 'next/image'
 
 const Page = () => {
   return (
@@ -90,3 +90,4 @@ const Page = () => {
 }
 
 export default Page
+export { getServerSideProps } from '../components/chakra'
