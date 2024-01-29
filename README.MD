@@ -2,6 +2,8 @@
 
 []()
 
+[![Foto](./doc/1.png)]
+
 ## Stack
 
 - [Next.js](https://nextjs.org/) - Un framework de React
