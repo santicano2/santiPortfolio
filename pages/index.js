@@ -50,6 +50,7 @@ const Page = () => {
                 alt="Foto de perfil"
                 width="100"
                 height="100"
+                priority={true}
               />
             </Box>
           </Box>
