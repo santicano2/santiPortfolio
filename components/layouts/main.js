@@ -11,6 +11,17 @@ const Main = ({ children, router }) => {
         <meta name="description" content="Santi Portfolio" />
         <meta name="author" content="Santiago Cano" />
         <meta name="author" content="LaVieja1" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/android-chrome-192x192.png"
+        ></link>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:site_name" content="Santiago Cano" />
+        <meta name="og:title" content="Santiago Cano" />
+        <meta property="og:type" content="website" />
         <title>Home - Santiago Cano</title>
       </Head>
 
