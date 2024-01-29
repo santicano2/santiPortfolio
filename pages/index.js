@@ -5,7 +5,6 @@ import {
   Heading,
   Box,
   Button,
-  SimpleGrid,
   useColorModeValue,
   List,
   ListItem
@@ -17,6 +16,7 @@ import Section from '../components/section'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import StackSection from '../components/stack'
 import Image from 'next/image'
+import ContactForm from '../components/contact'
 
 const Page = () => {
   return (
@@ -133,6 +133,8 @@ const Page = () => {
             </ListItem>
           </List>
         </Section>
+
+        <ContactForm />
       </Container>
     </Layout>
   )
