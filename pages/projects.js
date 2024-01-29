@@ -112,7 +112,7 @@ const projects = () => (
         </Section>
       </SimpleGrid>
 
-      <Box textAlign="center" my={2}>
+      <Box textAlign="center" my={2} mb={4}>
         <Button
           as={NextLink}
           href="https://github.com/LaVieja1"
