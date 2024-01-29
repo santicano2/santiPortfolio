@@ -63,7 +63,7 @@ const ContactForm = () => {
   return (
     <Section delay={0.4}>
       <Heading as="h3" variant="section-title" mb={8}>
-        Contáctame
+        Contactame
       </Heading>
       {error && (
         <Text color="red.300" my={4} fontSize="xl">
