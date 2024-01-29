@@ -9,6 +9,6 @@
         "varsIgnorePattern": "^_"
       }
     ],
-    "react/display-name": "disabled"
+    "react/display-name": 0
   }
 }
