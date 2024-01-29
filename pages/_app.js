@@ -2,6 +2,7 @@ import Layout from '../components/layouts/main'
 import Fonts from '../components/fonts'
 import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
+import { Analytics } from '@vercel/analytics/react'
 
 function Website({ Component, pageProps, router }) {
   return (
@@ -19,6 +20,7 @@ function Website({ Component, pageProps, router }) {
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
+        <Analytics />
       </Layout>
     </Chakra>
   )
