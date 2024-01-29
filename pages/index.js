@@ -37,7 +37,7 @@ const Page = () => {
           >
             <Box
               borderColor={useColorModeValue('gray.800', 'whiteAlpha.900')}
-              borderWidth={3}
+              borderWidth={2}
               borderStyle="solid"
               w="100px"
               h="100px"
