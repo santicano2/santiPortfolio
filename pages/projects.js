@@ -1,7 +1,17 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  Button,
+  useColorModeValue,
+  Box
+} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
+import { IoLogoGithub } from 'react-icons/io5'
 
 import thumbWilly from '../public/images/projects/thumbnail_willy.png'
 import thumbWeText from '../public/images/projects/thumbnail_wetext.png'
@@ -101,6 +111,18 @@ const projects = () => (
           </WorkGridItem>
         </Section>
       </SimpleGrid>
+
+      <Box textAlign="center" my={2}>
+        <Button
+          as={NextLink}
+          href="https://github.com/LaVieja1"
+          scroll={false}
+          rightIcon={<IoLogoGithub />}
+          colorScheme={useColorModeValue('blue', 'red')}
+        >
+          Más proyectos
+        </Button>
+      </Box>
     </Container>
   </Layout>
 )
