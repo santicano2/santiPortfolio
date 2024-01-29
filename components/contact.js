@@ -16,6 +16,8 @@ const initState = { values: initValues }
 
 const ContactForm = () => {
   const [state, setState] = useState(initState)
+  const [touched, setTouched] = useState({})
+
   const { values } = state
 
   const handleChange = ({ target }) =>
@@ -27,13 +29,19 @@ const ContactForm = () => {
       }
     }))
 
+  const onBlur = ({ target }) =>
+    setTouched(prev => ({
+      ...prev,
+      [target.name]: true
+    }))
+
   return (
     <Section delay={0.4}>
       <Heading as="h3" variant="section-title" mb={8}>
         Contáctame
       </Heading>
 
-      <FormControl isRequired isInvalid={!values.name} mb={4}>
+      <FormControl isRequired isInvalid={touched.name && !values.name} mb={4}>
         <FormLabel>Nombre</FormLabel>
         <Input
           type="text"
@@ -41,33 +49,44 @@ const ContactForm = () => {
           errorBorderColor="red.300"
           value={values.name}
           onChange={handleChange}
+          onBlur={onBlur}
         />
         <FormErrorMessage>Requerido</FormErrorMessage>
       </FormControl>
 
-      <FormControl isRequired isInvalid={!values.name} mb={4}>
+      <FormControl isRequired isInvalid={touched.email && !values.email} mb={4}>
         <FormLabel>Email</FormLabel>
         <Input
           type="email"
           name="email"
           value={values.email}
           onChange={handleChange}
+          onBlur={onBlur}
         />
         <FormErrorMessage>Requerido</FormErrorMessage>
       </FormControl>
 
-      <FormControl isRequired isInvalid={!values.name} mb={4}>
+      <FormControl
+        isRequired
+        isInvalid={touched.subject && !values.subject}
+        mb={4}
+      >
         <FormLabel>Asunto</FormLabel>
         <Input
           type="text"
           name="subject"
           value={values.subject}
           onChange={handleChange}
+          onBlur={onBlur}
         />
         <FormErrorMessage>Requerido</FormErrorMessage>
       </FormControl>
 
-      <FormControl isRequired isInvalid={!values.name} mb={4}>
+      <FormControl
+        isRequired
+        isInvalid={touched.message && !values.message}
+        mb={4}
+      >
         <FormLabel>Mensaje</FormLabel>
         <Textarea
           type="text"
@@ -75,6 +94,7 @@ const ContactForm = () => {
           rows={4}
           value={values.message}
           onChange={handleChange}
+          onBlur={onBlur}
         />
         <FormErrorMessage>Requerido</FormErrorMessage>
       </FormControl>
