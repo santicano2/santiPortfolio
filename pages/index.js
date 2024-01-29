@@ -1,15 +1,21 @@
 import NextLink from 'next/link'
 import {
+  Link,
   Container,
   Heading,
   Box,
   Button,
-  useColorModeValue
+  SimpleGrid,
+  useColorModeValue,
+  List,
+  ListItem
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
+import { GridItem } from '../components/grid-item'
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import StackSection from '../components/stack'
 import Image from 'next/image'
 
@@ -84,6 +90,50 @@ const Page = () => {
         </Section>
 
         <StackSection />
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Redes sociales
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/LaVieja1" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme={useColorModeValue('blue', 'red')}
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @LaVieja1
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                href="https://www.linkedin.com/in/santicano2/"
+                target="_blank"
+              >
+                <Button
+                  variant="ghost"
+                  colorScheme={useColorModeValue('blue', 'red')}
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  @santicano2
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://www.instagram.com/santicano2" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme={useColorModeValue('blue', 'red')}
+                  leftIcon={<IoLogoInstagram />}
+                >
+                  @santicano2
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
       </Container>
     </Layout>
   )
