@@ -29,52 +29,55 @@ const ContactForm = () => {
 
   return (
     <Section delay={0.4}>
-      <Heading as="h3" variant="section-title" my={4}>
+      <Heading as="h3" variant="section-title" mb={8}>
         Contáctame
       </Heading>
 
-      <Box gap={4}>
-        <FormControl isRequired mb={2}>
-          <FormLabel>Nombre</FormLabel>
-          <Input
-            type="text"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-          />
-        </FormControl>
+      <FormControl isRequired isInvalid={!values.name} mb={4}>
+        <FormLabel>Nombre</FormLabel>
+        <Input
+          type="text"
+          name="name"
+          errorBorderColor="red.300"
+          value={values.name}
+          onChange={handleChange}
+        />
+        <FormErrorMessage>Requerido</FormErrorMessage>
+      </FormControl>
 
-        <FormControl isRequired mb={2}>
-          <FormLabel>Email</FormLabel>
-          <Input
-            type="email"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-          />
-        </FormControl>
+      <FormControl isRequired isInvalid={!values.name} mb={4}>
+        <FormLabel>Email</FormLabel>
+        <Input
+          type="email"
+          name="email"
+          value={values.email}
+          onChange={handleChange}
+        />
+        <FormErrorMessage>Requerido</FormErrorMessage>
+      </FormControl>
 
-        <FormControl isRequired mb={2}>
-          <FormLabel>Asunto</FormLabel>
-          <Input
-            type="text"
-            name="subject"
-            value={values.subject}
-            onChange={handleChange}
-          />
-        </FormControl>
+      <FormControl isRequired isInvalid={!values.name} mb={4}>
+        <FormLabel>Asunto</FormLabel>
+        <Input
+          type="text"
+          name="subject"
+          value={values.subject}
+          onChange={handleChange}
+        />
+        <FormErrorMessage>Requerido</FormErrorMessage>
+      </FormControl>
 
-        <FormControl isRequired mb={2}>
-          <FormLabel>Mensaje</FormLabel>
-          <Textarea
-            type="text"
-            name="message"
-            rows={4}
-            value={values.message}
-            onChange={handleChange}
-          />
-        </FormControl>
-      </Box>
+      <FormControl isRequired isInvalid={!values.name} mb={4}>
+        <FormLabel>Mensaje</FormLabel>
+        <Textarea
+          type="text"
+          name="message"
+          rows={4}
+          value={values.message}
+          onChange={handleChange}
+        />
+        <FormErrorMessage>Requerido</FormErrorMessage>
+      </FormControl>
     </Section>
   )
 }
