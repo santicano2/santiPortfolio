@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import Section from './section'
 import {
-  Box,
   Heading,
   FormControl,
   FormLabel,
   FormErrorMessage,
-  FormHelperText,
   Input,
-  Textarea
+  Textarea,
+  Button,
+  useColorModeValue
 } from '@chakra-ui/react'
 
 const initValues = { name: '', email: '', subject: '', message: '' }
@@ -18,7 +18,7 @@ const ContactForm = () => {
   const [state, setState] = useState(initState)
   const [touched, setTouched] = useState({})
 
-  const { values } = state
+  const { values, isLoading } = state
 
   const handleChange = ({ target }) =>
     setState(prev => ({
@@ -30,10 +30,14 @@ const ContactForm = () => {
     }))
 
   const onBlur = ({ target }) =>
-    setTouched(prev => ({
+    setTouched(prev => ({ ...prev, [target.name]: true }))
+
+  const onSubmit = async () => {
+    setState(prev => ({
       ...prev,
-      [target.name]: true
+      isLoading: true
     }))
+  }
 
   return (
     <Section delay={0.4}>
@@ -47,6 +51,7 @@ const ContactForm = () => {
           type="text"
           name="name"
           errorBorderColor="red.300"
+          borderColor={useColorModeValue('black', 'whiteAlpha.300')}
           value={values.name}
           onChange={handleChange}
           onBlur={onBlur}
@@ -59,6 +64,8 @@ const ContactForm = () => {
         <Input
           type="email"
           name="email"
+          errorBorderColor="red.300"
+          borderColor={useColorModeValue('black', 'whiteAlpha.300')}
           value={values.email}
           onChange={handleChange}
           onBlur={onBlur}
@@ -75,6 +82,8 @@ const ContactForm = () => {
         <Input
           type="text"
           name="subject"
+          errorBorderColor="red.300"
+          borderColor={useColorModeValue('black', 'whiteAlpha.300')}
           value={values.subject}
           onChange={handleChange}
           onBlur={onBlur}
@@ -91,6 +100,8 @@ const ContactForm = () => {
         <Textarea
           type="text"
           name="message"
+          errorBorderColor="red.300"
+          borderColor={useColorModeValue('black', 'whiteAlpha.300')}
           rows={4}
           value={values.message}
           onChange={handleChange}
@@ -98,6 +109,17 @@ const ContactForm = () => {
         />
         <FormErrorMessage>Requerido</FormErrorMessage>
       </FormControl>
+
+      <Button
+        colorScheme={useColorModeValue('blue', 'red')}
+        isLoading={isLoading}
+        isDisabled={
+          !values.name || !values.email || !values.subject || !values.message
+        }
+        onClick={onSubmit}
+      >
+        Enviar
+      </Button>
     </Section>
   )
 }
