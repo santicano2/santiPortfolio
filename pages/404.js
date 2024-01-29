@@ -8,7 +8,6 @@ import {
   Button,
   useColorModeValue
 } from '@chakra-ui/react'
-import Head from 'next/head'
 
 const NotFound = () => {
   return (

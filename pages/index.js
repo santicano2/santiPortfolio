@@ -5,7 +5,6 @@ import {
   Heading,
   Box,
   Button,
-  SimpleGrid,
   useColorModeValue,
   List,
   ListItem
@@ -17,6 +16,7 @@ import Section from '../components/section'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import StackSection from '../components/stack'
 import Image from 'next/image'
+import ContactForm from '../components/contact'
 
 const Page = () => {
   return (
@@ -37,7 +37,7 @@ const Page = () => {
           >
             <Box
               borderColor={useColorModeValue('gray.800', 'whiteAlpha.900')}
-              borderWidth={3}
+              borderWidth={2}
               borderStyle="solid"
               w="100px"
               h="100px"
@@ -50,6 +50,7 @@ const Page = () => {
                 alt="Foto de perfil"
                 width="100"
                 height="100"
+                priority={true}
               />
             </Box>
           </Box>
@@ -133,6 +134,8 @@ const Page = () => {
             </ListItem>
           </List>
         </Section>
+
+        <ContactForm />
       </Container>
     </Layout>
   )
