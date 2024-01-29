@@ -10,6 +10,7 @@ import {
   Button,
   useColorModeValue
 } from '@chakra-ui/react'
+import { sendContactForm } from '../lib/api'
 
 const initValues = { name: '', email: '', subject: '', message: '' }
 const initState = { values: initValues }
@@ -37,6 +38,7 @@ const ContactForm = () => {
       ...prev,
       isLoading: true
     }))
+    await sendContactForm(values)
   }
 
   return (
