@@ -6,9 +6,11 @@ import {
   FormLabel,
   FormErrorMessage,
   Input,
+  Text,
   Textarea,
   Button,
-  useColorModeValue
+  useColorModeValue,
+  useToast
 } from '@chakra-ui/react'
 import { sendContactForm } from '../lib/api'
 
@@ -16,10 +18,11 @@ const initValues = { name: '', email: '', subject: '', message: '' }
 const initState = { values: initValues }
 
 const ContactForm = () => {
+  const toast = useToast()
   const [state, setState] = useState(initState)
   const [touched, setTouched] = useState({})
 
-  const { values, isLoading } = state
+  const { values, isLoading, error } = state
 
   const handleChange = ({ target }) =>
     setState(prev => ({
@@ -38,7 +41,23 @@ const ContactForm = () => {
       ...prev,
       isLoading: true
     }))
-    await sendContactForm(values)
+    try {
+      await sendContactForm(values)
+      setTouched({})
+      setState(initState)
+      toast({
+        title: 'Mensaje enviado.',
+        status: 'success',
+        duration: 2000,
+        position: 'top'
+      })
+    } catch (error) {
+      setState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: error.message
+      }))
+    }
   }
 
   return (
@@ -46,6 +65,11 @@ const ContactForm = () => {
       <Heading as="h3" variant="section-title" mb={8}>
         Contáctame
       </Heading>
+      {error && (
+        <Text color="red.300" my={4} fontSize="xl">
+          {error}
+        </Text>
+      )}
 
       <FormControl isRequired isInvalid={touched.name && !values.name} mb={4}>
         <FormLabel>Nombre</FormLabel>
