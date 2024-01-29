@@ -2,7 +2,7 @@
 
 []()
 
-[![Foto](./doc/1.png)]
+![Foto](./doc/1.png)
 
 ## Stack
 
