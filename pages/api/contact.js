@@ -1,10 +1,10 @@
 import { transporter, mailOptions } from '../../lib/nodemailer'
 
 const CONTACT_MESSAGE_FIELDS = {
-  name: 'Name',
-  email: 'Email',
-  subject: 'Subject',
-  message: 'Message'
+  name: 'Nombre',
+  email: 'Mail',
+  subject: 'Asunto',
+  message: 'Mensaje'
 }
 
 const generateEmailContent = data => {
