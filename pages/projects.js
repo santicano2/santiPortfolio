@@ -22,6 +22,10 @@ import thumbCreadorCV from '../public/images/projects/thumbnail_creadorcv.png'
 import thumbSuperheroMemory from '../public/images/projects/thumbnail_superheromemory.png'
 import thumbBattleship from '../public/images/projects/thumbnail_battleship.png'
 import thumbEtchASketch from '../public/images/projects/thumbnail_etch-a-sketch.png'
+import thumbTaskTrack from '../public/images/projects/thumbnail_tasktrack.webp'
+import thumbRoamRental from '../public/images/projects/thumbnail_roamrental.webp'
+import thumbMiniLinkio from '../public/images/projects/thumbnail_minilinkio.webp'
+import thumbFormatFlow from '../public/images/projects/thumbnail_formatflow.webp'
 
 const projects = () => (
   <Layout title="Proyectos">
@@ -33,6 +37,26 @@ const projects = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem
+            id="roamrental"
+            title="Roam Rental"
+            thumbnail={thumbRoamRental}
+          >
+            Aplicación web de alquiler de propiedades estilo Airbnb
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
+            id="tasktrack"
+            title="Task-Track"
+            thumbnail={thumbTaskTrack}
+          >
+            Proyecto FullStack imitando a la página Trello.
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
             id="whereswally"
             title="Where's Wally"
             thumbnail={thumbWilly}
@@ -40,9 +64,21 @@ const projects = () => (
             Inspirado en el juego Where&apos;s Wally, con sistema de puntuación.
           </WorkGridItem>
         </Section>
+
         <Section>
           <WorkGridItem id="wetext" title="WeText" thumbnail={thumbWeText}>
             Una app web de mensaje de texto
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
+            id="formatflow"
+            title="FormatFlow"
+            thumbnail={thumbFormatFlow}
+          >
+            FormatFlow es una aplicación para tomar notas sencillas usando
+            Markdown
           </WorkGridItem>
         </Section>
 
@@ -55,6 +91,17 @@ const projects = () => (
             Red social imitación de Facebook
           </WorkGridItem>
         </Section>
+
+        <Section>
+          <WorkGridItem
+            id="minilinkio"
+            title="MiniLinkio"
+            thumbnail={thumbMiniLinkio}
+          >
+            Recortador de links
+          </WorkGridItem>
+        </Section>
+
         <Section delay={0.1}>
           <WorkGridItem
             id="shopcart"
