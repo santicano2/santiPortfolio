@@ -42,6 +42,7 @@ export const WorkGridItem = ({
         style={{ borderRadius: '12px' }}
         className="grid-item-thumbnail"
         placeholder="blur"
+        loading="lazy"
       />
       <LinkOverlay as="div" href={`/${category}/${id}`}>
         <Text mt={2} fontSize={20}>

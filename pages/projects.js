@@ -26,6 +26,7 @@ import thumbTaskTrack from '../public/images/projects/thumbnail_tasktrack.webp'
 import thumbRoamRental from '../public/images/projects/thumbnail_roamrental.webp'
 import thumbMiniLinkio from '../public/images/projects/thumbnail_minilinkio.webp'
 import thumbFormatFlow from '../public/images/projects/thumbnail_formatflow.webp'
+import thumbMovieMatrix from '../public/images/projects/thumbnail_moviematrix.webp'
 
 const projects = () => (
   <Layout title="Proyectos">
@@ -35,6 +36,16 @@ const projects = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section>
+          <WorkGridItem
+            id="moviematrix"
+            title="MovieMatrix"
+            thumbnail={thumbMovieMatrix}
+          >
+            Aplicación web para buscar peliculas
+          </WorkGridItem>
+        </Section>
+
         <Section>
           <WorkGridItem
             id="roamrental"
