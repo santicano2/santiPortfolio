@@ -5,32 +5,36 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Project = () => (
-  <Layout title="Pathfinding Visualizer">
+  <Layout title="Patient Management">
     <Container my={6}>
       <Title>
-        Pathfinding Visualizer <Badge>2024</Badge>
+        Patient Management <Badge>2024</Badge>
       </Title>
       <Paragraph>
-        App para mostrar el proceso de pathfinding de los algoritmos
-        seleccionados. Con opción de elegir algoritmo, laberinto y su velocidad.
+        Sistema de turnos para pacientes de obra social/hospital. Con opciones
+        para pacientes y administrador.
       </Paragraph>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Sitio Web</Meta>
-          <Link href="https://pathfinding-visualizer-rose.vercel.app/">
-            https://pathfinding-visualizer-rose.vercel.app/
+          <Link href="https://patient-management-seven.vercel.app/">
+            https://patient-management-seven.vercel.app/
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>Vite.js, Tailwind CSS, TypeScript</span>
+          <span>Next.js, TailwindCSS, TypeScript, ShadCn, Appwrite</span>
         </ListItem>
       </List>
 
       <WorkImage
-        src="../../images/projects/thumbnail_pathfinding.webp"
-        alt="Pathfinding Visualizer"
+        src="../../images/projects/thumbnail_patient.webp"
+        alt="Patient Management"
+      />
+      <WorkImage
+        src="../../images/projects/patient.webp"
+        alt="Patient Management"
       />
     </Container>
   </Layout>

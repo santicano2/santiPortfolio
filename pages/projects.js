@@ -29,6 +29,8 @@ import thumbFormatFlow from '../public/images/projects/thumbnail_formatflow.webp
 import thumbMovieMatrix from '../public/images/projects/thumbnail_moviematrix.webp'
 import thumbPathFinding from '../public/images/projects/thumbnail_pathfinding.webp'
 import thumbSorting from '../public/images/projects/thumbnail_sorting.webp'
+import thumbPatient from '../public/images/projects/thumbnail_patient.webp'
+import thumbRentalCars from '../public/images/projects/thumbnail_rentalcars.webp'
 
 const projects = () => (
   <Layout title="Proyectos">
@@ -38,6 +40,26 @@ const projects = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section>
+          <WorkGridItem
+            id="rental-cars"
+            title="Rental Cars"
+            thumbnail={thumbRentalCars}
+          >
+            Sistema de alquiler de autos
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
+            id="patient-management"
+            title="Patient Management"
+            thumbnail={thumbPatient}
+          >
+            Sistema de turnos para pacientes y administrador
+          </WorkGridItem>
+        </Section>
+
         <Section>
           <WorkGridItem
             id="sorting-visualizer"

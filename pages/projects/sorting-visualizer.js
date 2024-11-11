@@ -5,7 +5,7 @@ import Paragraph from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 
 const Project = () => (
-  <Layout title="Movie Matrix">
+  <Layout title="Sorting Visualizer">
     <Container my={6}>
       <Title>
         Sorting Visualizer <Badge>2024</Badge>
