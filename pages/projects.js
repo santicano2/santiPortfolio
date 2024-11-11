@@ -27,6 +27,8 @@ import thumbRoamRental from '../public/images/projects/thumbnail_roamrental.webp
 import thumbMiniLinkio from '../public/images/projects/thumbnail_minilinkio.webp'
 import thumbFormatFlow from '../public/images/projects/thumbnail_formatflow.webp'
 import thumbMovieMatrix from '../public/images/projects/thumbnail_moviematrix.webp'
+import thumbPathFinding from '../public/images/projects/thumbnail_pathfinding.webp'
+import thumbSorting from '../public/images/projects/thumbnail_sorting.webp'
 
 const projects = () => (
   <Layout title="Proyectos">
@@ -38,11 +40,31 @@ const projects = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
           <WorkGridItem
+            id="sorting-visualizer"
+            title="Sorting Visualizer"
+            thumbnail={thumbSorting}
+          >
+            Visualizador de algoritmos de ordenamiento
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
             id="moviematrix"
-            title="MovieMatrix"
+            title="Movie Matrix"
             thumbnail={thumbMovieMatrix}
           >
             Aplicación web para buscar peliculas
+          </WorkGridItem>
+        </Section>
+
+        <Section>
+          <WorkGridItem
+            id="pathfinding-visualizer"
+            title="Pathfinding Visualizer"
+            thumbnail={thumbPathFinding}
+          >
+            Web para mostrar el proceso de pathfinding de los algoritmos
           </WorkGridItem>
         </Section>
 
