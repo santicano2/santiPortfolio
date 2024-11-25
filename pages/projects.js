@@ -218,7 +218,7 @@ const projects = () => (
       <Box textAlign="center" my={2} mb={4}>
         <Button
           as={NextLink}
-          href="https://github.com/LaVieja1"
+          href="https://github.com/santicano2"
           scroll={false}
           rightIcon={<IoLogoGithub />}
           colorScheme={useColorModeValue('blue', 'red')}
